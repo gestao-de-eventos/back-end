@@ -16,7 +16,7 @@ router.post("/register",
     eventController.registerEvent.bind(eventController)
 )
 
-router.post("/register/link/:eventID",
+router.post("/:eventID/link",
     authController.auth.bind(authController),
     eventController.linkEvent.bind(eventController)
 );
