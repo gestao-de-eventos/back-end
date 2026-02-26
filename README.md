@@ -20,7 +20,7 @@
 > Arquivo gerado automaticamente a partir do código fonte.
 
 #https://api-rest-login-jwt.vercel.app
----
+--------------------------------------
 
 **Prefixos de rota**
 
@@ -50,6 +50,7 @@
       "email": "string",
       "phone": "string",
       "cpf": "string",
+      "dataNascimento":"date"
       "contaSicoob": true,
       "password": "string"
     }
@@ -82,6 +83,10 @@
 ---
 
 **Rotas - Evento**
+
+   **- GET /event/**
+
+    - busca todos os eventos
 
 - **POST /event/register**
 
@@ -193,11 +198,6 @@ curl -X POST http://localhost:PORT/user/login \
 curl -H "Authorization: Bearer <TOKEN>" http://localhost:PORT/user/getUsers
 ```
 
-
 ---
 
 Gerado a partir dos arquivos em `src/`.
-
-
-
-

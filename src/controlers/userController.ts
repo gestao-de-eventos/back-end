@@ -29,6 +29,7 @@ export class UserController {
                     email: req.body.email,
                     phone: req.body.phone,
                     cpf: req.body.cpf,
+                    dataNascimento: req.body.dataNascimento,
                     contaSicoob: req.body.contaSicoob,
                     password: hashPass,
 

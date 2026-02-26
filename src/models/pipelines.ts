@@ -27,8 +27,10 @@ export async function getUsersByEvent(eventID: string) {
             dataInscricao: "$subscribedAt", // Pega o valor do link
             nome: "$usuario_detalhes.name",
             email: "$usuario_detalhes.email",
+            dataNasciment: "$usuariio_detalhes.dataNascimento",
             telefone: "$usuario_detalhes.phone",
             constSicoob: "$usuario_detalhes.contaSicoob"
+            
         }
     }
     ]

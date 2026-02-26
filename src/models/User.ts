@@ -5,6 +5,7 @@ interface user{
     email:string,
     phone:string,
     cpf:string,
+    dataNascimento:Date
     contaSicoob:boolean,
     password:string,
     admin:boolean,
@@ -15,6 +16,7 @@ const userSchema = new Schema <user>({
     name:{type:String, required:true, minlength:3, maxlength:50},
     email:{type:String, required:true, unique:true, minlength:6, maxlength:50},
     phone:{type:String, required:true,  minlength:10, maxlength:11},
+    dataNascimento:{type:Date, required:true},
     cpf:{type:String, required:true, unique:true, minlength:11, maxlength:11},
     contaSicoob:{type:Boolean, required:true},
     password:{type:String, required:true, minlength:5},
