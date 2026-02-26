@@ -107,7 +107,7 @@
     ```
   - Resposta: `201` documento `Event` criado.
   - Observação: no código atual `local` é preenchido com `description` — corrija para `req.body.local`.
-- **POST /event/register/link/:eventID**
+- **POST /event/:eventID/link/**
 
   - Descrição: inscreve o usuário no evento (cria `Link`).
   - **Auth:** `auth`
