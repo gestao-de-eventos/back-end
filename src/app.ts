@@ -7,8 +7,7 @@ import cors from "cors"
 import userRoutes from "./routes/userRouter.js"
 import adminRoutes from "./routes/adminRouter.js"
 import eventRoutes from "./routes/eventRouter.js"
-import { connection } from "./database/connection.js"
-connection();
+
 
 
 app.use(express.json());
