@@ -85,7 +85,6 @@ export async function getAllCommonUsers(emailLogado: string) {
 export async function listEvents() {
     return await Event.find({})
         .select({
-            _id:0,
             organizerId:0,
             __v:0
         })
