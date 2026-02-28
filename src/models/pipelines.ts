@@ -1,7 +1,6 @@
 import { Link } from "./Link.js"
 import { Event } from "./Event.js"
 import { Types } from "mongoose"
-import { response } from "express"
 import { User } from "./User.js"
 
 
@@ -56,7 +55,8 @@ export async function getEventsByUser(userID: string) {
         { $unwind: "$event_detalhes" },
         {
             $project: {
-                _id: 0,
+                _id: "$event_detalhes._id",
+                local:"$event_detalhes.local",
                 dataDaInscricao: "$subscribedAt",
                 evento: "$event_detalhes.title",
                 dataDoEvento: "$event_detalhes.date"
