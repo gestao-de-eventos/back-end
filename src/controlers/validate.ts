@@ -1,7 +1,7 @@
 import joi from "joi"; // ou @hapi/joi se não quiser atualizar
 
 export const registerValidate = (data: any) => {
-    
+
     const schema = joi.object({
         name: joi.string().required().min(3).max(50),
         email: joi.string().required().email().max(70),
@@ -18,6 +18,7 @@ export const registerValidate = (data: any) => {
 export const registerValidateEvent = (data: any) => {
     const schema = joi.object({
         title: joi.string().required().min(3).max(50),
+        img: joi.string().required(),
         description: joi.string().required().min(10).max(50000),
         local: joi.string().required().min(5).max(100),
         date: joi.date().required(),
@@ -28,7 +29,7 @@ export const registerValidateEvent = (data: any) => {
 };
 
 export const loginValidate = (data: any) => {
-    
+
     const schema = joi.object({
         email: joi.string().required().email(),
         password: joi.string().required()
@@ -39,7 +40,7 @@ export const loginValidate = (data: any) => {
 
 
 export const registerValidateLinkEvent = (data: any) => {
-    
+
     const schema = joi.object({
         userID: joi.string().required()
     });

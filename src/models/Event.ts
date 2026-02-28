@@ -3,6 +3,7 @@ import { Schema, model, Document } from 'mongoose';
 
 interface Event extends Document {
   title: string;
+  img:string;
   description: string;
   local:string,
   date: Date;
@@ -13,6 +14,7 @@ interface Event extends Document {
 
 const EventSchema = new Schema <Event>({
   title: { type: String, required: true },
+  img: { type: String, required: true },
   description: { type: String, required: true },
   local: { type: String, required: true },
   date: { type: Date, required: true },

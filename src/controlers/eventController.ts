@@ -25,6 +25,7 @@ export class EventController {
             if (error) return res.status(400).send(error.message);
             const event = new Event({
                 title: req.body.title,
+                img: req.body.img,
                 description: req.body.description,
                 local: req.body.local,
                 date: req.body.date,
