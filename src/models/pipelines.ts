@@ -90,10 +90,11 @@ export async function listEvents() {
         })
 }
 
-export async function getEvent(id:string) {
-    return await Event.find({$eq:id})
+export async function getEvent(id: string) {
+    // Busca pelo campo _id do MongoDB
+    return await Event.findById(id) 
         .select({
-            organizerId:0,
-            __v:0
-        })
+            organizerId: 0,
+            __v: 0
+        });
 }
