@@ -32,7 +32,7 @@ router.get("/",
     eventController.listAll.bind(eventController)
 )
 
-router.get("/:eventID",
+router.get("/where/:eventID",
     authController.auth.bind(authController),
     eventController.listEventByID.bind(eventController)
 
