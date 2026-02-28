@@ -89,3 +89,11 @@ export async function listEvents() {
             __v:0
         })
 }
+
+export async function getEvent(id:string) {
+    return await Event.find({$eq:id})
+        .select({
+            organizerId:0,
+            __v:0
+        })
+}

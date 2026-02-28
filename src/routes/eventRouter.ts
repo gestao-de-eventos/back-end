@@ -32,6 +32,12 @@ router.get("/",
     eventController.listAll.bind(eventController)
 )
 
+router.get("/:eventID",
+    authController.auth.bind(authController),
+    eventController.listEventByID.bind(eventController)
+
+)
+
 
 
 export default router

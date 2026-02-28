@@ -5,7 +5,7 @@ import dotenv from "dotenv"
 //dotenv.config()
 
 import { loginValidate, registerValidate, registerValidateEvent, registerValidateLinkEvent } from "./validate.js";
-import { getUsersByEvent, listEvents } from "../models/pipelines.js";
+import { getUsersByEvent, listEvents, getEvent } from "../models/pipelines.js";
 
 
 
@@ -103,6 +103,15 @@ export class EventController {
         }
     }
 
+    listEventByID = async (req:Request, res:Response) => {
+        try{
+            const eventID = req.params.eventID as string;
+            const events = await getEvent(eventID)
+            res.status(200).json(events)
+        }catch(error:any){
+            res.status(500).send(error.message);
+        }
+    }
 
 }
 
